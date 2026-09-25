@@ -1,0 +1,23 @@
+# build directories
+build/
+build-*/
+out/
+cmake-build-*/
+
+# model / data / audio artifacts -- never committed
+*.gguf
+*.wav
+*.i32
+
+# python
+__pycache__/
+*.pyc
+.cache/
+
+# editor / OS cruft
+.vs/
+.vscode/
+*.suo
+*.user
+Thumbs.db
+.DS_Store

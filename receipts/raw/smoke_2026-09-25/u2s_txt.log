@@ -1,0 +1,18 @@
+[DYNIN-U2S-IN file=<path>/smoke_units_79.txt n_units=79]
+dynin_vocoder: loaded <path>/emova_u2s.gguf (n_styles=126 style_dim=256 inter=192 sr=22050 base_offset=178)
+[DYNIN-U2S-MODEL n_styles=126 n_speakers=1344 style_dim=256 inter_channels=192 sample_rate=22050 style=41 seed=1234]
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8150 MiB):
+  Device 0: NVIDIA GeForce RTX 5070 Laptop GPU, compute capability 12.0, VMM: yes, VRAM: 8150 MiB
+[ENCP-GRAPH ops=816 on_cuda=816 on_cpu=0 on_other=0]
+[ENCP-GRAPH ops=816 on_cuda=816 on_cpu=0 on_other=0]
+[DYNIN-U2S-STAGE-CHECK stage=enc_p max_abs=0.001890 cos=0.99999998 ms_cpu=187.49 ms_cuda=6.19 ok=1 err=]
+[ENCP-DEFAULT backend=cuda reason=stage_check_ok]
+[FLOW-GRAPH ops=593 on_cuda=593 on_cpu=0 on_other=0]
+[DYNIN-U2S-STAGE-CHECK stage=flow max_abs=0.002846 cos=0.99999996 ms_cpu=503.18 ms_cuda=16.36 ok=1 err=]
+[FLOW-DEFAULT backend=cuda reason=stage_check_ok]
+[DYNIN-U2S-GRAPH ops=798 on_cuda=798 on_cpu=0 on_other=0]
+[DYNIN-U2S-CUDA-CHECK samples=70912 snr_db=57.15 max_abs_int16=92 max_abs_float=0.002825 first_mismatch=4 ms_cpu=2278.37 ms_cuda=83.06 cuda_init=1 ok=1 err=]
+[DYNIN-U2S-DEFAULT backend=cuda reason=parity_ok rule=cuda_vs_cpu_snr snr_db=57.15 bar_db=40.00 max_abs_int16=92]
+[DYNIN-U2S-STAGES enc_p=442.90 dp=34.57 expand=0.70 flow=527.37 gen=83.06 total=3367.67 T_y=277 n_units=79]
+[DYNIN-U2S ms=3367.67 n_units=79 backend=cuda threads=14 enc_p_ms=442.90 flow_ms=527.37 gen_ms=83.06]
+[DYNIN-U2S-OUT wav=<path>/smoke_u2s_txt.wav samples=70912 seconds=3.216 sample_rate=22050 peak=0.69022 rms=0.09570 t_y=277]

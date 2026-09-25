@@ -1,0 +1,4 @@
+"arm","n_ok","mean_exact_ms","mean_margin_ms","speedup","mean_unit_match","mean_word_overlap_exact","mean_word_overlap_margin"
+"block128_steps48_margin32","10","33915.9","3846.2","8.818","0.8437","0.5671","0.6613"
+"block128_steps96_margin32","10","72672.8","9749.6","7.454","0.9098","0.8875","0.8875"
+"block16_steps48_margin32","10","34683.3","4695.1","7.387","0.6417","0.6734","0.7402"

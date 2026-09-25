@@ -1,0 +1,42 @@
+vocab-only keys: 37  reference keys: 38
+identical keys (36):
+  = diffusion.shift_logits
+  = general.architecture
+  = general.base_model.0.name
+  = general.base_model.0.organization
+  = general.base_model.0.repo_url
+  = general.base_model.count
+  = general.languages
+  = general.license
+  = general.name
+  = general.organization
+  = general.quantization_version
+  = general.tags
+  = general.type
+  = llada.attention.causal
+  = llada.attention.head_count
+  = llada.attention.head_count_kv
+  = llada.attention.layer_norm_rms_epsilon
+  = llada.block_count
+  = llada.context_length
+  = llada.embedding_length
+  = llada.feed_forward_length
+  = llada.rope.dimension_count
+  = llada.rope.freq_base
+  = llada.vocab_size
+  = tokenizer.chat_template
+  = tokenizer.ggml.add_bos_token
+  = tokenizer.ggml.add_eos_token
+  = tokenizer.ggml.bos_token_id
+  = tokenizer.ggml.eos_token_id
+  = tokenizer.ggml.mask_token_id
+  = tokenizer.ggml.merges
+  = tokenizer.ggml.model
+  = tokenizer.ggml.padding_token_id
+  = tokenizer.ggml.pre
+  = tokenizer.ggml.token_type
+  = tokenizer.ggml.tokens
+differing keys (1):
+  ! general.file_type vocab-only: ('4', b'\x01\x00\x00\x00') reference: ('4', b'\x0f\x00\x00\x00')
+only in vocab-only (0): []
+only in reference (1): ['general.size_label']

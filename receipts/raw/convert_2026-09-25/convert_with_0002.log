@@ -1,0 +1,43 @@
+INFO:hf-to-gguf:Loading model: Dynin-Omni
+WARNING:hf-to-gguf:Failed to load model config from Dynin-Omni: The repository Dynin-Omni contains custom code which must be executed to correctly load the model. You can inspect the repository content at <path>/Dynin-Omni .
+ You can inspect the repository content at https://hf.co/Dynin-Omni.
+Please pass the argument `trust_remote_code=True` to allow custom code to be run.
+WARNING:hf-to-gguf:Trying to load config.json instead
+INFO:hf-to-gguf:Model architecture: DyninOmniForConditionalGeneration
+WARNING:hf-to-gguf:Failed to load model config from Dynin-Omni: The repository Dynin-Omni contains custom code which must be executed to correctly load the model. You can inspect the repository content at <path>/Dynin-Omni .
+ You can inspect the repository content at https://hf.co/Dynin-Omni.
+Please pass the argument `trust_remote_code=True` to allow custom code to be run.
+WARNING:hf-to-gguf:Trying to load config.json instead
+INFO:gguf.gguf_writer:gguf: This GGUF file is for Little Endian only
+INFO:hf-to-gguf:Exporting model vocab...
+INFO:hf-to-gguf:Set meta model
+INFO:hf-to-gguf:Set model parameters
+INFO:hf-to-gguf:gguf: context length = 4096
+INFO:hf-to-gguf:gguf: embedding length = 4096
+INFO:hf-to-gguf:gguf: head count = 32
+INFO:hf-to-gguf:gguf: key-value head count = 32
+INFO:hf-to-gguf:gguf: rope theta = 500000.0
+INFO:hf-to-gguf:gguf: rms norm epsilon = 1e-05
+INFO:hf-to-gguf:gguf: file type = 1
+WARNING:gguf.gguf_writer:Duplicated key name 'llada.context_length', overwriting it with new value 4096 of type UINT32
+WARNING:gguf.gguf_writer:Duplicated key name 'llada.embedding_length', overwriting it with new value 4096 of type UINT32
+INFO:hf-to-gguf:Set model quantization version
+INFO:hf-to-gguf:Set model tokenizer
+INFO:gguf.vocab:Adding 125824 merge(s).
+INFO:gguf.vocab:Setting special token type bos to 126080
+INFO:gguf.vocab:Setting special token type eos to 126081
+INFO:gguf.vocab:Setting special token type pad to 126081
+WARNING:gguf.vocab:No handler for special token type cls with id 126082 - skipping
+INFO:gguf.vocab:Setting special token type mask to 126336
+INFO:gguf.vocab:Setting add_bos_token to False
+INFO:gguf.vocab:Setting add_eos_token to False
+INFO:gguf.vocab:Setting chat_template to {% set loop_messages = messages %}{% for message in loop_messages %}{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>
+
+'+ message['content'] | trim + '<|eot_id|>' %}{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}{{ content }}{% endfor %}{{ '<|start_header_id|>assistant<|end_header_id|>
+
+' }}
+WARNING:gguf.gguf_writer:Duplicated key name 'tokenizer.ggml.add_bos_token', overwriting it with new value True of type BOOL
+INFO:gguf.gguf_writer:Writing the following files:
+INFO:gguf.gguf_writer:<path>/dynin-omni.vocab.gguf: n_tensors = 0, total_size = negligible - metadata only
+INFO:hf-to-gguf:Model vocab successfully exported to <path>/dynin-omni.vocab.gguf
+exit=0

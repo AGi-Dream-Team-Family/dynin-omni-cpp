@@ -1,0 +1,45 @@
+From 57b51b3b8c4ef1da4ac73e0d5928922503b3da32 Mon Sep 17 00:00:00 2001
+From: AGi-DTF <fam@agi-dtf.life>
+Date: Fri, 25 Sep 2026 04:49:35 +0100
+Subject: [PATCH] convert: register Dynin-Omni architectures as LLaDA
+
+Dynin-Omni checkpoints (snu-aidas/Dynin-Omni) declare the architectures
+DyninOmniForConditionalGeneration and DyninOmniModelLM in config.json.
+Their language model is a plain LLaDA-style masked-diffusion transformer,
+so map both names to the existing LLaDA converter class. With this
+change convert_hf_to_gguf.py writes a GGUF with general.architecture =
+llada; without it the converter does not recognise the model.
+---
+ conversion/__init__.py | 2 ++
+ conversion/llada.py    | 2 +-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/conversion/__init__.py b/conversion/__init__.py
+index bfd784a..b36c087 100644
+--- a/conversion/__init__.py
++++ b/conversion/__init__.py
+@@ -57,6 +57,8 @@ TEXT_MODEL_MAP: dict[str, str] = {
+     "Dots1ForCausalLM": "dots1",
+     "DotsOCRForCausalLM": "qwen",
+     "DreamModel": "dream",
++    "DyninOmniForConditionalGeneration": "llada",
++    "DyninOmniModelLM": "llada",
+     "Ernie4_5ForCausalLM": "ernie",
+     "Ernie4_5_ForCausalLM": "ernie",
+     "Ernie4_5_MoeForCausalLM": "ernie",
+diff --git a/conversion/llada.py b/conversion/llada.py
+index 98dc9de..97fc0c5 100644
+--- a/conversion/llada.py
++++ b/conversion/llada.py
+@@ -10,7 +10,7 @@ if TYPE_CHECKING:
+ from .base import ModelBase, TextModel, gguf
+ 
+ 
+-@ModelBase.register("LLaDAModelLM")
++@ModelBase.register("LLaDAModelLM", "DyninOmniModelLM", "DyninOmniForConditionalGeneration")
+ class LLaDAModel(TextModel):
+     model_arch = gguf.MODEL_ARCH.LLADA
+     undo_permute = True
+-- 
+2.55.0.windows.5
+

@@ -1,0 +1,8 @@
+{
+  "text": "They packed the boxes and loaded the small van.",
+  "kv_margin": 32,
+  "seed": 42,
+  "lengths": { "exact": 46, "margin": 47 },
+  "exact_match_fraction": 0.391304,
+  "first_divergence_index": 17
+}

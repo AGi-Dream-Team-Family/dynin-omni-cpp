@@ -1,0 +1,8 @@
+{
+  "text": "The shop closes early on Sundays and holidays.",
+  "kv_margin": 32,
+  "seed": 42,
+  "lengths": { "exact": 80, "margin": 80 },
+  "exact_match_fraction": 1.000000,
+  "first_divergence_index": -1
+}

@@ -1,0 +1,8 @@
+INFO:hf-to-gguf:Loading model: Dynin-Omni
+WARNING:hf-to-gguf:Failed to load model config from Dynin-Omni: The repository Dynin-Omni contains custom code which must be executed to correctly load the model. You can inspect the repository content at <path>/Dynin-Omni .
+ You can inspect the repository content at https://hf.co/Dynin-Omni.
+Please pass the argument `trust_remote_code=True` to allow custom code to be run.
+WARNING:hf-to-gguf:Trying to load config.json instead
+INFO:hf-to-gguf:Model architecture: DyninOmniForConditionalGeneration
+ERROR:hf-to-gguf:Model DyninOmniForConditionalGeneration is not supported
+exit=1

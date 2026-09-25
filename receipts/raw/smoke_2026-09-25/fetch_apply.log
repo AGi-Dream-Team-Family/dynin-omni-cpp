@@ -1,0 +1,12 @@
+Fri Sep 25 04:49:05 GMTST 2026
+From https://github.com/PrismML-Eng/llama.cpp
+ * branch            7529fdaaf99ffdc5ca71ace9c7409a56b27ad92f -> FETCH_HEAD
+7529fdaaf99ffdc5ca71ace9c7409a56b27ad92f force qwen35 to treat IGPU like a GPU so DSpark does not fall back to CPU (#88)
+Applying: dynin-voice: EMOVA U2S vocoder port and block-local KV diffusion decode for Dynin-Omni (LLaDA KV cache, pad-mask token, batch position rewrite)
+65ba4020cdd9e3572f82e205ea035b25e2114613 5e2099203bf25cc9a32f4ad218730ddcf7bbf257
+Applying: convert: register Dynin-Omni architectures as LLaDA
+cc9e01a convert: register Dynin-Omni architectures as LLaDA
+65ba402 dynin-voice: EMOVA U2S vocoder port and block-local KV diffusion decode for Dynin-Omni (LLaDA KV cache, pad-mask token, batch position rewrite)
+7529fda force qwen35 to treat IGPU like a GPU so DSpark does not fall back to CPU (#88)
+ 23 files changed, 5184 insertions(+), 61 deletions(-)
+tree e76e3eb7e93662a7e0a2a3e7b2ef71bc99fecfae

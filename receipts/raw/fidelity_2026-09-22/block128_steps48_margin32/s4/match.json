@@ -1,0 +1,8 @@
+{
+  "text": "The bus was late again, so we walked instead.",
+  "kv_margin": 32,
+  "seed": 42,
+  "lengths": { "exact": 46, "margin": 46 },
+  "exact_match_fraction": 0.521739,
+  "first_divergence_index": 1
+}

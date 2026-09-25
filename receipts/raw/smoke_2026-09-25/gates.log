@@ -1,0 +1,5 @@
+2026-09-25 05:22:09 GATE gpu_used_mib=94 free_ram_gb=8.37 ok=True
+2026-09-25 05:22:15 GATE gpu_used_mib=94 free_ram_gb=8.37 ok=True
+2026-09-25 05:22:17 GATE gpu_used_mib=99 free_ram_gb=8.35 ok=True
+2026-09-25 05:23:04 GATE gpu_used_mib=455 free_ram_gb=10.12 ok=True
+2026-09-25 05:23:09 GATE gpu_used_mib=446 free_ram_gb=10.14 ok=True

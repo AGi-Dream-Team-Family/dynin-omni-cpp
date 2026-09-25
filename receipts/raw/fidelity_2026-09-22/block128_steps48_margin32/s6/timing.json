@@ -1,0 +1,12 @@
+{
+  "exact": {
+    "ms_per_block": [32198.828],
+    "total_ms": 33047.734,
+    "n_forward_passes": 49
+  },
+  "margin": {
+    "ms_per_block": [3433.472],
+    "total_ms": 3580.218,
+    "n_forward_passes": 49
+  }
+}

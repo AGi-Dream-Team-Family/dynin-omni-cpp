@@ -1,0 +1,8 @@
+{
+  "text": "A light wind pushed the leaves across the yard.",
+  "kv_margin": 32,
+  "seed": 42,
+  "lengths": { "exact": 45, "margin": 45 },
+  "exact_match_fraction": 1.000000,
+  "first_divergence_index": -1
+}

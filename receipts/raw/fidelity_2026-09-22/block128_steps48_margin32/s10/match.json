@@ -1,0 +1,8 @@
+{
+  "text": "The lights flickered twice before the power went out.",
+  "kv_margin": 32,
+  "seed": 42,
+  "lengths": { "exact": 46, "margin": 46 },
+  "exact_match_fraction": 0.021739,
+  "first_divergence_index": 1
+}

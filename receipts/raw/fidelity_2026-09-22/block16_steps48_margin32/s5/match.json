@@ -1,0 +1,8 @@
+{
+  "text": "He hung his coat by the door and sat down.",
+  "kv_margin": 32,
+  "seed": 42,
+  "lengths": { "exact": 47, "margin": 47 },
+  "exact_match_fraction": 0.446809,
+  "first_divergence_index": 6
+}

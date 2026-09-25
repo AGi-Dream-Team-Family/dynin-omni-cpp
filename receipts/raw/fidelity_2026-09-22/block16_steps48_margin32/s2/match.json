@@ -1,0 +1,8 @@
+{
+  "text": "Rain moved across the valley before noon.",
+  "kv_margin": 32,
+  "seed": 42,
+  "lengths": { "exact": 47, "margin": 47 },
+  "exact_match_fraction": 0.936170,
+  "first_divergence_index": 24
+}

@@ -1,0 +1,8 @@
+{
+  "text": "She counted the coins twice and put them back.",
+  "kv_margin": 32,
+  "seed": 42,
+  "lengths": { "exact": 64, "margin": 64 },
+  "exact_match_fraction": 1.000000,
+  "first_divergence_index": -1
+}

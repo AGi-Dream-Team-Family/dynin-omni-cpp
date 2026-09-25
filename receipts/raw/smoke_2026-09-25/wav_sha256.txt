@@ -1,0 +1,8 @@
+# SHA-256 of the wavs written by this smoke run, and of the 22 Sep bench wavs
+# for sentence 1 of the block 128 / steps 48 / margin 32 arm (receipts/fidelity_2026-09-22.md).
+e35f9a342f96e6092d160db2fff30e3ee1046b59f80ecacd9643a4b43a54f080  smoke_2026-09-25/u2s/smoke_u2s.wav
+e35f9a342f96e6092d160db2fff30e3ee1046b59f80ecacd9643a4b43a54f080  smoke_2026-09-25/u2s/smoke_u2s_txt.wav
+1256bf2caf0b99cf133a32e67eb9bb6854319c9d3829bef9189b17b19d89e1bb  smoke_2026-09-25/t2s/out/t2s_exact.wav
+1256bf2caf0b99cf133a32e67eb9bb6854319c9d3829bef9189b17b19d89e1bb  smoke_2026-09-25/t2s/out/t2s_margin.wav
+1256bf2caf0b99cf133a32e67eb9bb6854319c9d3829bef9189b17b19d89e1bb  fidelity_2026-09-22/block128_steps48_margin32/s1/t2s_exact.wav
+1256bf2caf0b99cf133a32e67eb9bb6854319c9d3829bef9189b17b19d89e1bb  fidelity_2026-09-22/block128_steps48_margin32/s1/t2s_margin.wav

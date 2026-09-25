@@ -1,0 +1,76 @@
+dynin-omni-cpp
+Copyright (c) 2026 AGi-DTF
+Licensed under the MIT licence (see LICENSE).
+
+This repository contains or modifies work from the projects below.
+
+1. EMOVA speech tokenizer (UVITS unit-to-speech decoder and SPIRAL/FSQ
+   speech-to-unit encoder)
+   https://github.com/emova-ollm/EMOVA_speech_tokenizer
+   Copyright the EMOVA authors. Licensed under the Apache License,
+   Version 2.0; a copy is in LICENSES/Apache-2.0.txt.
+   Paper: "EMOVA: Empowering Language Models to See, Hear and Speak with
+   Vivid Emotions", arXiv:2409.18042.
+
+   examples/dynin-voice/dynin_vocoder.cpp and dynin_vocoder.h are a C++/ggml
+   re-implementation of the UVITS decoder in that repository
+   (speech_tokenization/UVITS/models.py, modules.py, attentions.py and
+   transforms.py); where it helps trace a mismatch, the source comments
+   name the Python module a section mirrors.
+   tools/convert_emova_u2s_to_gguf.py follows the same
+   code's tensor names, shapes and weight_norm layout. Changes: the Python /
+   PyTorch modules were re-expressed in C++ and ggml, and the checkpoint is
+   converted to GGUF. The EMOVA U2S weights themselves are not included in
+   this repository; the separately published emova_u2s.gguf release asset
+   is a format conversion of the Apache-2.0 checkpoint
+   Emova-ollm/emova_speech_tokenizer_hf and remains under Apache-2.0.
+
+   examples/dynin-voice/dynin_units.h and dynin_units.cpp are a C++/ggml
+   re-implementation of the S2U (speech-to-unit) encoder in the same
+   repository (speech_tokenization/SPIRAL_L2_BN_FSQ_CTC/: the SPIRAL model
+   code and configuration, its hparams.yaml, and my_scripts/fsq.py).
+   Changes: the PyTorch mel frontend, convolution and transformer stages
+   and the FSQ quantizer were re-expressed in C++ and ggml, and the
+   weights are read from a GGUF. The S2U weights and the script that
+   converts them to GGUF are not included in this repository or its
+   release.
+
+   Upstream notices carried by that code, reproduced here as attribution:
+   - SPIRAL (Huang et al., arXiv:2201.10207): source files marked
+     "Copyright (C) 2021. Huawei Technologies Co., Ltd." and
+     "Copyright (C) 2022. Huawei Technologies Co., Ltd.", Apache-2.0.
+   - NVIDIA NeMo, on which the SPIRAL code is built: "Copyright (c) 2020,
+     NVIDIA CORPORATION", Apache-2.0.
+   - my_scripts/fsq.py: "Copyright 2023 Google LLC", Apache-2.0, modified
+     from https://github.com/google-research/google-research/blob/master/fsq/fsq.ipynb
+     (Finite Scalar Quantization, Mentzer et al., arXiv:2309.15505).
+
+2. llama.cpp / ggml
+   https://github.com/ggml-org/llama.cpp
+   Copyright (c) 2023-2026 The ggml authors. MIT licence.
+   The patches in patches/ modify files of the PrismML-Eng fork of
+   llama.cpp (https://github.com/PrismML-Eng/llama.cpp, same MIT licence
+   and copyright line) and must be applied to that tree.
+
+3. Projects the EMOVA UVITS decoder code is based on. The vocoder port is
+   a translation of that code, so their notices are reproduced here as
+   attribution:
+   - VITS, https://github.com/jaywalnut310/vits (Kim, Kong and Son,
+     arXiv:2106.06103). MIT licence, "Copyright (c) 2021 Jaehyeon Kim".
+   - HiFi-GAN, https://github.com/jik876/hifi-gan (Kong, Kim and Bae,
+     arXiv:2010.05646). MIT licence, "Copyright (c) 2020 Jungil Kong".
+   - Neural Spline Flows, https://github.com/bayesiains/nsf (Durkan,
+     Bekasov, Murray and Papamakarios, arXiv:1906.04032): the
+     rational-quadratic spline in transforms.py. MIT licence, "Copyright
+     (c) 2019 Conor Durkan, Artur Bekasov, Iain Murray, George
+     Papamakarios".
+
+4. Dynin-Omni (AIDAS Lab, Seoul National University)
+   https://github.com/AIDASLab/Dynin-Omni
+   MIT licence, "Copyright (c) 2026 AIDAS Lab, Seoul National University".
+   examples/dynin-voice/dynin-t2s-kvblock.cpp ports the per-block decode
+   recipe of t2s_generate_mmu_like in that reference implementation to
+   C++ on llama.cpp, and adds a block-local KV cache.
+   patches/0002 registers the Dynin-Omni architecture names in the GGUF
+   converter. The Dynin-Omni weights are not included in this repository
+   or its release.

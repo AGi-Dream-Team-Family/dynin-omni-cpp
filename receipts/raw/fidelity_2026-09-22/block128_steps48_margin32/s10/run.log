@@ -1,0 +1,1003 @@
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8150 MiB):
+  Device 0: NVIDIA GeForce RTX 5070 Laptop GPU, compute capability 12.0, VMM: yes, VRAM: 8150 MiB
+llama_model_loader: loaded meta data with 38 key-value pairs and 291 tensors from <path>/Dynin-Omni-8.1B-Q4_K_M.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llada
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Dynin Omni
+llama_model_loader: - kv   3:                       general.organization str              = Snu Aidas
+llama_model_loader: - kv   4:                         general.size_label str              = 8.1B
+llama_model_loader: - kv   5:                            general.license str              = mit
+llama_model_loader: - kv   6:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   7:                  general.base_model.0.name str              = MMaDA 8B MixCoT
+llama_model_loader: - kv   8:          general.base_model.0.organization str              = Gen Verse
+llama_model_loader: - kv   9:              general.base_model.0.repo_url str              = https://huggingface.co/Gen-Verse/MMaD...
+llama_model_loader: - kv  10:                               general.tags arr[str,5]       = ["diffusion", "any-to-any", "omni-mod...
+llama_model_loader: - kv  11:                          general.languages arr[str,1]       = ["en"]
+llama_model_loader: - kv  12:                          llada.block_count u32              = 32
+llama_model_loader: - kv  13:                       llada.context_length u32              = 4096
+llama_model_loader: - kv  14:                     llada.embedding_length u32              = 4096
+llama_model_loader: - kv  15:                 llada.attention.head_count u32              = 32
+llama_model_loader: - kv  16:              llada.attention.head_count_kv u32              = 32
+llama_model_loader: - kv  17:                       llada.rope.freq_base f32              = 500000.000000
+llama_model_loader: - kv  18:     llada.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  19:                           llada.vocab_size u32              = 138752
+llama_model_loader: - kv  20:                 llada.rope.dimension_count u32              = 128
+llama_model_loader: - kv  21:                  llada.feed_forward_length u32              = 12288
+llama_model_loader: - kv  22:                     llada.attention.causal bool             = false
+llama_model_loader: - kv  23:                     diffusion.shift_logits bool             = false
+llama_model_loader: - kv  24:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  25:                         tokenizer.ggml.pre str              = bailingmoe
+llama_model_loader: - kv  26:                      tokenizer.ggml.tokens arr[str,138752]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+llama_model_loader: - kv  27:                  tokenizer.ggml.token_type arr[i32,138752]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  28:                      tokenizer.ggml.merges arr[str,125824]  = ["Ġ Ġ", "Ġ t", "i n", "Ġ a", "h e...
+llama_model_loader: - kv  29:                tokenizer.ggml.bos_token_id u32              = 126080
+llama_model_loader: - kv  30:                tokenizer.ggml.eos_token_id u32              = 126081
+llama_model_loader: - kv  31:            tokenizer.ggml.padding_token_id u32              = 126081
+llama_model_loader: - kv  32:               tokenizer.ggml.mask_token_id u32              = 126336
+llama_model_loader: - kv  33:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  34:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  35:                    tokenizer.chat_template str              = {% set loop_messages = messages %}{% ...
+llama_model_loader: - kv  36:               general.quantization_version u32              = 2
+llama_model_loader: - kv  37:                          general.file_type u32              = 15
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.65 GiB (4.92 BPW) 
+llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 5070 Laptop GPU) (0000:01:00.0) - 7013 MiB free
+init_tokenizer: initializing tokenizer for type 2
+load: 0 unused tokens
+load: control token: 126273 '<|reserved_token_189|>' is not marked as EOG
+load: control token: 126228 '<|reserved_token_144|>' is not marked as EOG
+load: control token: 126211 '<|reserved_token_127|>' is not marked as EOG
+load: control token: 126265 '<|reserved_token_181|>' is not marked as EOG
+load: control token: 126329 '<|reserved_token_245|>' is not marked as EOG
+load: control token: 126136 '<|reserved_token_52|>' is not marked as EOG
+load: control token: 126169 '<|reserved_token_85|>' is not marked as EOG
+load: control token: 126125 '<|reserved_token_41|>' is not marked as EOG
+load: control token: 126174 '<|reserved_token_90|>' is not marked as EOG
+load: control token: 126157 '<|reserved_token_73|>' is not marked as EOG
+load: control token: 126294 '<|reserved_token_210|>' is not marked as EOG
+load: control token: 126259 '<|reserved_token_175|>' is not marked as EOG
+load: control token: 126180 '<|reserved_token_96|>' is not marked as EOG
+load: control token: 126086 '<|sov|>' is not marked as EOG
+load: control token: 126117 '<|reserved_token_33|>' is not marked as EOG
+load: control token: 126135 '<|reserved_token_51|>' is not marked as EOG
+load: control token: 126262 '<|reserved_token_178|>' is not marked as EOG
+load: control token: 126365 '<|reserved_token_16|>' is not marked as EOG
+load: control token: 126176 '<|reserved_token_92|>' is not marked as EOG
+load: control token: 126237 '<|reserved_token_153|>' is not marked as EOG
+load: control token: 126199 '<|reserved_token_115|>' is not marked as EOG
+load: control token: 126114 '<|reserved_token_30|>' is not marked as EOG
+load: control token: 126172 '<|reserved_token_88|>' is not marked as EOG
+load: control token: 126306 '<|reserved_token_222|>' is not marked as EOG
+load: control token: 126291 '<|reserved_token_207|>' is not marked as EOG
+load: control token: 126353 '<|reserved_token_4|>' is not marked as EOG
+load: control token: 126287 '<|reserved_token_203|>' is not marked as EOG
+load: control token: 126127 '<|reserved_token_43|>' is not marked as EOG
+load: control token: 126233 '<|reserved_token_149|>' is not marked as EOG
+load: control token: 126367 '<|reserved_token_18|>' is not marked as EOG
+load: control token: 126102 '<|v2s|>' is not marked as EOG
+load: control token: 126131 '<|reserved_token_47|>' is not marked as EOG
+load: control token: 126292 '<|reserved_token_208|>' is not marked as EOG
+load: control token: 126096 '<|s2t|>' is not marked as EOG
+load: control token: 126324 '<|reserved_token_240|>' is not marked as EOG
+load: control token: 126098 '<|eoa|>' is not marked as EOG
+load: control token: 126167 '<|reserved_token_83|>' is not marked as EOG
+load: control token: 126263 '<|reserved_token_179|>' is not marked as EOG
+load: control token: 126224 '<|reserved_token_140|>' is not marked as EOG
+load: control token: 126113 '<|reserved_token_29|>' is not marked as EOG
+load: control token: 126175 '<|reserved_token_91|>' is not marked as EOG
+load: control token: 126298 '<|reserved_token_214|>' is not marked as EOG
+load: control token: 126141 '<|reserved_token_57|>' is not marked as EOG
+load: control token: 126178 '<|reserved_token_94|>' is not marked as EOG
+load: control token: 126264 '<|reserved_token_180|>' is not marked as EOG
+load: control token: 126159 '<|reserved_token_75|>' is not marked as EOG
+load: control token: 126370 '<|reserved_token_21|>' is not marked as EOG
+load: control token: 126187 '<|reserved_token_103|>' is not marked as EOG
+load: control token: 126277 '<|reserved_token_193|>' is not marked as EOG
+load: control token: 126328 '<|reserved_token_244|>' is not marked as EOG
+load: control token: 126112 '<|reserved_token_28|>' is not marked as EOG
+load: control token: 126168 '<|reserved_token_84|>' is not marked as EOG
+load: control token: 126128 '<|reserved_token_44|>' is not marked as EOG
+load: control token: 126173 '<|reserved_token_89|>' is not marked as EOG
+load: control token: 126101 '<|s2s|>' is not marked as EOG
+load: control token: 126256 '<|reserved_token_172|>' is not marked as EOG
+load: control token: 126253 '<|reserved_token_169|>' is not marked as EOG
+load: control token: 126132 '<|reserved_token_48|>' is not marked as EOG
+load: control token: 126210 '<|reserved_token_126|>' is not marked as EOG
+load: control token: 126195 '<|reserved_token_111|>' is not marked as EOG
+load: control token: 126116 '<|reserved_token_32|>' is not marked as EOG
+load: control token: 126334 '<|reserved_token_250|>' is not marked as EOG
+load: control token: 126346 '<|start_header_id|>' is not marked as EOG
+load: control token: 126331 '<|reserved_token_247|>' is not marked as EOG
+load: control token: 126151 '<|reserved_token_67|>' is not marked as EOG
+load: control token: 126153 '<|reserved_token_69|>' is not marked as EOG
+load: control token: 126196 '<|reserved_token_112|>' is not marked as EOG
+load: control token: 126362 '<|reserved_token_13|>' is not marked as EOG
+load: control token: 126207 '<|reserved_token_123|>' is not marked as EOG
+load: control token: 126105 '<think>' is not marked as EOG
+load: control token: 126369 '<|reserved_token_20|>' is not marked as EOG
+load: control token: 126165 '<|reserved_token_81|>' is not marked as EOG
+load: control token: 126138 '<|reserved_token_54|>' is not marked as EOG
+load: control token: 126333 '<|reserved_token_249|>' is not marked as EOG
+load: control token: 126143 '<|reserved_token_59|>' is not marked as EOG
+load: control token: 126358 '<|reserved_token_9|>' is not marked as EOG
+load: control token: 126100 '<|v2t|>' is not marked as EOG
+load: control token: 126140 '<|reserved_token_56|>' is not marked as EOG
+load: control token: 126205 '<|reserved_token_121|>' is not marked as EOG
+load: control token: 126080 '<|startoftext|>' is not marked as EOG
+load: control token: 126231 '<|reserved_token_147|>' is not marked as EOG
+load: control token: 126106 '</think>' is not marked as EOG
+load: control token: 126111 '<|reserved_token_27|>' is not marked as EOG
+load: control token: 126090 '<|t2v|>' is not marked as EOG
+load: control token: 126230 '<|reserved_token_146|>' is not marked as EOG
+load: control token: 126355 '<|reserved_token_6|>' is not marked as EOG
+load: control token: 126245 '<|reserved_token_161|>' is not marked as EOG
+load: control token: 126189 '<|reserved_token_105|>' is not marked as EOG
+load: control token: 126239 '<|reserved_token_155|>' is not marked as EOG
+load: control token: 126163 '<|reserved_token_79|>' is not marked as EOG
+load: control token: 126320 '<|reserved_token_236|>' is not marked as EOG
+load: control token: 126107 '<|reserved_token_23|>' is not marked as EOG
+load: control token: 126121 '<|reserved_token_37|>' is not marked as EOG
+load: control token: 126371 '<|reserved_token_22|>' is not marked as EOG
+load: control token: 126326 '<|reserved_token_242|>' is not marked as EOG
+load: control token: 126268 '<|reserved_token_184|>' is not marked as EOG
+load: control token: 126161 '<|reserved_token_77|>' is not marked as EOG
+load: control token: 126322 '<|reserved_token_238|>' is not marked as EOG
+load: control token: 126133 '<|reserved_token_49|>' is not marked as EOG
+load: control token: 126310 '<|reserved_token_226|>' is not marked as EOG
+load: control token: 126257 '<|reserved_token_173|>' is not marked as EOG
+load: control token: 126229 '<|reserved_token_145|>' is not marked as EOG
+load: control token: 126166 '<|reserved_token_82|>' is not marked as EOG
+load: control token: 126282 '<|reserved_token_198|>' is not marked as EOG
+load: control token: 126217 '<|reserved_token_133|>' is not marked as EOG
+load: control token: 126213 '<|reserved_token_129|>' is not marked as EOG
+load: control token: 126318 '<|reserved_token_234|>' is not marked as EOG
+load: control token: 126311 '<|reserved_token_227|>' is not marked as EOG
+load: control token: 126255 '<|reserved_token_171|>' is not marked as EOG
+load: control token: 126119 '<|reserved_token_35|>' is not marked as EOG
+load: control token: 126272 '<|reserved_token_188|>' is not marked as EOG
+load: control token: 126330 '<|reserved_token_246|>' is not marked as EOG
+load: control token: 126252 '<|reserved_token_168|>' is not marked as EOG
+load: control token: 126097 '<|soa|>' is not marked as EOG
+load: control token: 126223 '<|reserved_token_139|>' is not marked as EOG
+load: control token: 126279 '<|reserved_token_195|>' is not marked as EOG
+load: control token: 126190 '<|reserved_token_106|>' is not marked as EOG
+load: control token: 126315 '<|reserved_token_231|>' is not marked as EOG
+load: control token: 126250 '<|reserved_token_166|>' is not marked as EOG
+load: control token: 126283 '<|reserved_token_199|>' is not marked as EOG
+load: control token: 126215 '<|reserved_token_131|>' is not marked as EOG
+load: control token: 126366 '<|reserved_token_17|>' is not marked as EOG
+load: control token: 126340 '<role>' is not marked as EOG
+load: control token: 126276 '<|reserved_token_192|>' is not marked as EOG
+load: control token: 126115 '<|reserved_token_31|>' is not marked as EOG
+load: control token: 126319 '<|reserved_token_235|>' is not marked as EOG
+load: control token: 126352 '<|reserved_token_3|>' is not marked as EOG
+load: control token: 126285 '<|reserved_token_201|>' is not marked as EOG
+load: control token: 126219 '<|reserved_token_135|>' is not marked as EOG
+load: control token: 126123 '<|reserved_token_39|>' is not marked as EOG
+load: control token: 126108 '<|reserved_token_24|>' is not marked as EOG
+load: control token: 126280 '<|reserved_token_196|>' is not marked as EOG
+load: control token: 126299 '<|reserved_token_215|>' is not marked as EOG
+load: control token: 126339 '<|reserved_token_255|>' is not marked as EOG
+load: control token: 126142 '<|reserved_token_58|>' is not marked as EOG
+load: control token: 126222 '<|reserved_token_138|>' is not marked as EOG
+load: control token: 126254 '<|reserved_token_170|>' is not marked as EOG
+load: control token: 126342 '<|arithmetic_start|>' is not marked as EOG
+load: control token: 126290 '<|reserved_token_206|>' is not marked as EOG
+load: control token: 126270 '<|reserved_token_186|>' is not marked as EOG
+load: control token: 126200 '<|reserved_token_116|>' is not marked as EOG
+load: control token: 126156 '<|reserved_token_72|>' is not marked as EOG
+load: control token: 126284 '<|reserved_token_200|>' is not marked as EOG
+load: control token: 126088 '<|t2i|>' is not marked as EOG
+load: control token: 126109 '<|reserved_token_25|>' is not marked as EOG
+load: control token: 126083 '[gMASK]' is not marked as EOG
+load: control token: 126360 '<|reserved_token_11|>' is not marked as EOG
+load: control token: 126137 '<|reserved_token_53|>' is not marked as EOG
+load: control token: 126225 '<|reserved_token_141|>' is not marked as EOG
+load: control token: 126184 '<|reserved_token_100|>' is not marked as EOG
+load: control token: 126171 '<|reserved_token_87|>' is not marked as EOG
+load: control token: 126149 '<|reserved_token_65|>' is not marked as EOG
+load: control token: 126147 '<|reserved_token_63|>' is not marked as EOG
+load: control token: 126344 '<|number_start|>' is not marked as EOG
+load: control token: 126312 '<|reserved_token_228|>' is not marked as EOG
+load: control token: 126275 '<|reserved_token_191|>' is not marked as EOG
+load: control token: 126335 '<|reserved_token_251|>' is not marked as EOG
+load: control token: 126288 '<|reserved_token_204|>' is not marked as EOG
+load: control token: 126356 '<|reserved_token_7|>' is not marked as EOG
+load: control token: 126323 '<|reserved_token_239|>' is not marked as EOG
+load: control token: 126258 '<|reserved_token_174|>' is not marked as EOG
+load: control token: 126221 '<|reserved_token_137|>' is not marked as EOG
+load: control token: 126202 '<|reserved_token_118|>' is not marked as EOG
+load: control token: 126181 '<|reserved_token_97|>' is not marked as EOG
+load: control token: 126185 '<|reserved_token_101|>' is not marked as EOG
+load: control token: 126244 '<|reserved_token_160|>' is not marked as EOG
+load: control token: 126249 '<|reserved_token_165|>' is not marked as EOG
+load: control token: 126278 '<|reserved_token_194|>' is not marked as EOG
+load: control token: 126126 '<|reserved_token_42|>' is not marked as EOG
+load: control token: 126307 '<|reserved_token_223|>' is not marked as EOG
+load: control token: 126186 '<|reserved_token_102|>' is not marked as EOG
+load: control token: 126152 '<|reserved_token_68|>' is not marked as EOG
+load: control token: 126182 '<|reserved_token_98|>' is not marked as EOG
+load: control token: 126094 '<|r2i|>' is not marked as EOG
+load: control token: 126325 '<|reserved_token_241|>' is not marked as EOG
+load: control token: 126212 '<|reserved_token_128|>' is not marked as EOG
+load: control token: 126193 '<|reserved_token_109|>' is not marked as EOG
+load: control token: 126118 '<|reserved_token_34|>' is not marked as EOG
+load: control token: 126082 '[CLS]' is not marked as EOG
+load: control token: 126084 '<|soi|>' is not marked as EOG
+load: control token: 126085 '<|eoi|>' is not marked as EOG
+load: control token: 126087 '<|eov|>' is not marked as EOG
+load: control token: 126089 '<|mmu|>' is not marked as EOG
+load: control token: 126091 '<|v2v|>' is not marked as EOG
+load: control token: 126092 '<|lvg|>' is not marked as EOG
+load: control token: 126093 '[iPAD]' is not marked as EOG
+load: control token: 126095 '<|i2i|>' is not marked as EOG
+load: control token: 126099 '<|t2s|>' is not marked as EOG
+load: control token: 126103 '<|ti2ti|>' is not marked as EOG
+load: control token: 126104 '<|t2ti|>' is not marked as EOG
+load: control token: 126110 '<|reserved_token_26|>' is not marked as EOG
+load: control token: 126120 '<|reserved_token_36|>' is not marked as EOG
+load: control token: 126122 '<|reserved_token_38|>' is not marked as EOG
+load: control token: 126124 '<|reserved_token_40|>' is not marked as EOG
+load: control token: 126129 '<|reserved_token_45|>' is not marked as EOG
+load: control token: 126130 '<|reserved_token_46|>' is not marked as EOG
+load: control token: 126134 '<|reserved_token_50|>' is not marked as EOG
+load: control token: 126139 '<|reserved_token_55|>' is not marked as EOG
+load: control token: 126144 '<|reserved_token_60|>' is not marked as EOG
+load: control token: 126145 '<|reserved_token_61|>' is not marked as EOG
+load: control token: 126146 '<|reserved_token_62|>' is not marked as EOG
+load: control token: 126148 '<|reserved_token_64|>' is not marked as EOG
+load: control token: 126150 '<|reserved_token_66|>' is not marked as EOG
+load: control token: 126154 '<|reserved_token_70|>' is not marked as EOG
+load: control token: 126155 '<|reserved_token_71|>' is not marked as EOG
+load: control token: 126158 '<|reserved_token_74|>' is not marked as EOG
+load: control token: 126160 '<|reserved_token_76|>' is not marked as EOG
+load: control token: 126162 '<|reserved_token_78|>' is not marked as EOG
+load: control token: 126164 '<|reserved_token_80|>' is not marked as EOG
+load: control token: 126170 '<|reserved_token_86|>' is not marked as EOG
+load: control token: 126177 '<|reserved_token_93|>' is not marked as EOG
+load: control token: 126179 '<|reserved_token_95|>' is not marked as EOG
+load: control token: 126183 '<|reserved_token_99|>' is not marked as EOG
+load: control token: 126188 '<|reserved_token_104|>' is not marked as EOG
+load: control token: 126191 '<|reserved_token_107|>' is not marked as EOG
+load: control token: 126192 '<|reserved_token_108|>' is not marked as EOG
+load: control token: 126194 '<|reserved_token_110|>' is not marked as EOG
+load: control token: 126197 '<|reserved_token_113|>' is not marked as EOG
+load: control token: 126198 '<|reserved_token_114|>' is not marked as EOG
+load: control token: 126201 '<|reserved_token_117|>' is not marked as EOG
+load: control token: 126203 '<|reserved_token_119|>' is not marked as EOG
+load: control token: 126204 '<|reserved_token_120|>' is not marked as EOG
+load: control token: 126206 '<|reserved_token_122|>' is not marked as EOG
+load: control token: 126208 '<|reserved_token_124|>' is not marked as EOG
+load: control token: 126209 '<|reserved_token_125|>' is not marked as EOG
+load: control token: 126214 '<|reserved_token_130|>' is not marked as EOG
+load: control token: 126216 '<|reserved_token_132|>' is not marked as EOG
+load: control token: 126218 '<|reserved_token_134|>' is not marked as EOG
+load: control token: 126220 '<|reserved_token_136|>' is not marked as EOG
+load: control token: 126226 '<|reserved_token_142|>' is not marked as EOG
+load: control token: 126227 '<|reserved_token_143|>' is not marked as EOG
+load: control token: 126232 '<|reserved_token_148|>' is not marked as EOG
+load: control token: 126234 '<|reserved_token_150|>' is not marked as EOG
+load: control token: 126235 '<|reserved_token_151|>' is not marked as EOG
+load: control token: 126236 '<|reserved_token_152|>' is not marked as EOG
+load: control token: 126238 '<|reserved_token_154|>' is not marked as EOG
+load: control token: 126240 '<|reserved_token_156|>' is not marked as EOG
+load: control token: 126241 '<|reserved_token_157|>' is not marked as EOG
+load: control token: 126242 '<|reserved_token_158|>' is not marked as EOG
+load: control token: 126243 '<|reserved_token_159|>' is not marked as EOG
+load: control token: 126246 '<|reserved_token_162|>' is not marked as EOG
+load: control token: 126247 '<|reserved_token_163|>' is not marked as EOG
+load: control token: 126248 '<|reserved_token_164|>' is not marked as EOG
+load: control token: 126251 '<|reserved_token_167|>' is not marked as EOG
+load: control token: 126260 '<|reserved_token_176|>' is not marked as EOG
+load: control token: 126261 '<|reserved_token_177|>' is not marked as EOG
+load: control token: 126266 '<|reserved_token_182|>' is not marked as EOG
+load: control token: 126267 '<|reserved_token_183|>' is not marked as EOG
+load: control token: 126269 '<|reserved_token_185|>' is not marked as EOG
+load: control token: 126271 '<|reserved_token_187|>' is not marked as EOG
+load: control token: 126274 '<|reserved_token_190|>' is not marked as EOG
+load: control token: 126281 '<|reserved_token_197|>' is not marked as EOG
+load: control token: 126286 '<|reserved_token_202|>' is not marked as EOG
+load: control token: 126289 '<|reserved_token_205|>' is not marked as EOG
+load: control token: 126293 '<|reserved_token_209|>' is not marked as EOG
+load: control token: 126295 '<|reserved_token_211|>' is not marked as EOG
+load: control token: 126296 '<|reserved_token_212|>' is not marked as EOG
+load: control token: 126297 '<|reserved_token_213|>' is not marked as EOG
+load: control token: 126300 '<|reserved_token_216|>' is not marked as EOG
+load: control token: 126301 '<|reserved_token_217|>' is not marked as EOG
+load: control token: 126302 '<|reserved_token_218|>' is not marked as EOG
+load: control token: 126303 '<|reserved_token_219|>' is not marked as EOG
+load: control token: 126304 '<|reserved_token_220|>' is not marked as EOG
+load: control token: 126305 '<|reserved_token_221|>' is not marked as EOG
+load: control token: 126308 '<|reserved_token_224|>' is not marked as EOG
+load: control token: 126309 '<|reserved_token_225|>' is not marked as EOG
+load: control token: 126313 '<|reserved_token_229|>' is not marked as EOG
+load: control token: 126314 '<|reserved_token_230|>' is not marked as EOG
+load: control token: 126316 '<|reserved_token_232|>' is not marked as EOG
+load: control token: 126317 '<|reserved_token_233|>' is not marked as EOG
+load: control token: 126321 '<|reserved_token_237|>' is not marked as EOG
+load: control token: 126327 '<|reserved_token_243|>' is not marked as EOG
+load: control token: 126332 '<|reserved_token_248|>' is not marked as EOG
+load: control token: 126336 '<|mdm_mask|>' is not marked as EOG
+load: control token: 126337 '<|reserved_token_253|>' is not marked as EOG
+load: control token: 126338 '<|reserved_token_254|>' is not marked as EOG
+load: control token: 126341 '</role>' is not marked as EOG
+load: control token: 126343 '<|arithmetic_end|>' is not marked as EOG
+load: control token: 126345 '<|number_end|>' is not marked as EOG
+load: control token: 126347 '<|end_header_id|>' is not marked as EOG
+load: control token: 126349 '<|reserved_token_0|>' is not marked as EOG
+load: control token: 126350 '<|reserved_token_1|>' is not marked as EOG
+load: control token: 126351 '<|reserved_token_2|>' is not marked as EOG
+load: control token: 126354 '<|reserved_token_5|>' is not marked as EOG
+load: control token: 126357 '<|reserved_token_8|>' is not marked as EOG
+load: control token: 126359 '<|reserved_token_10|>' is not marked as EOG
+load: control token: 126361 '<|reserved_token_12|>' is not marked as EOG
+load: control token: 126363 '<|reserved_token_14|>' is not marked as EOG
+load: control token: 126364 '<|reserved_token_15|>' is not marked as EOG
+load: control token: 126368 '<|reserved_token_19|>' is not marked as EOG
+load: printing all EOG tokens:
+load:   - 126081 ('<|endoftext|>')
+load:   - 126348 ('<|eot_id|>')
+load: special tokens cache size = 292
+load: token to piece cache size = 0.8058 MB
+print_info: arch                  = llada
+print_info: vocab_only            = 0
+print_info: no_alloc              = 0
+print_info: n_ctx_train           = 4096
+print_info: n_embd_inp            = 4096
+print_info: n_embd                = 4096
+print_info: n_embd_out            = 4096
+print_info: n_layer               = 32
+print_info: n_layer_all           = 32
+print_info: n_head                = 32
+print_info: n_head_kv             = 32
+print_info: n_rot                 = 128
+print_info: n_swa                 = 0
+print_info: is_swa_any            = 0
+print_info: n_embd_head_k         = 128
+print_info: n_embd_head_v         = 128
+print_info: n_gqa                 = 1
+print_info: n_embd_k_gqa          = 4096
+print_info: n_embd_v_gqa          = 4096
+print_info: f_norm_eps            = 0.0e+00
+print_info: f_norm_rms_eps        = 1.0e-05
+print_info: f_clamp_kqv           = 0.0e+00
+print_info: f_max_alibi_bias      = 0.0e+00
+print_info: f_logit_scale         = 0.0e+00
+print_info: f_attn_scale          = 0.0e+00
+print_info: f_attn_value_scale    = 0.0000
+print_info: n_ff                  = 12288
+print_info: n_expert              = 0
+print_info: n_expert_used         = 0
+print_info: n_expert_groups       = 0
+print_info: n_group_used          = 0
+print_info: causal attn           = 0
+print_info: pooling type          = -1
+print_info: rope type             = 0
+print_info: rope scaling          = linear
+print_info: freq_base_train       = 500000.0
+print_info: freq_scale_train      = 1
+print_info: n_ctx_orig_yarn       = 4096
+print_info: rope_yarn_log_mul     = 0.0000
+print_info: rope_finetuned        = unknown
+print_info: model type            = 8B
+print_info: model params          = 8.12 B
+print_info: general.name          = Dynin Omni
+print_info: vocab type            = BPE
+print_info: n_vocab               = 138752
+print_info: n_merges              = 125824
+print_info: BOS token             = 126080 '<|startoftext|>'
+print_info: EOS token             = 126081 '<|endoftext|>'
+print_info: EOT token             = 126081 '<|endoftext|>'
+print_info: PAD token             = 126081 '<|endoftext|>'
+print_info: MASK token            = 126336 '<|mdm_mask|>'
+print_info: LF token              = 198 'Ċ'
+print_info: EOG token             = 126081 '<|endoftext|>'
+print_info: EOG token             = 126348 '<|eot_id|>'
+print_info: max token length      = 154
+load_tensors: loading model tensors, this can take a while... (mmap = true, direct_io = false)
+load_tensors: layer   0 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   1 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   2 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   3 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   4 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   5 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   6 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   7 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   8 assigned to device CUDA0, is_swa = 0
+load_tensors: layer   9 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  10 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  11 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  12 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  13 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  14 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  15 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  16 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  17 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  18 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  19 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  20 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  21 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  22 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  23 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  24 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  25 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  26 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  27 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  28 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  29 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  30 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  31 assigned to device CUDA0, is_swa = 0
+load_tensors: layer  32 assigned to device CUDA0, is_swa = 0
+create_tensor: loading tensor token_embd.weight
+create_tensor: loading tensor output_norm.weight
+create_tensor: loading tensor output.weight
+create_tensor: loading tensor blk.0.attn_norm.weight
+create_tensor: loading tensor blk.0.attn_q.weight
+create_tensor: loading tensor blk.0.attn_k.weight
+create_tensor: loading tensor blk.0.attn_v.weight
+create_tensor: loading tensor blk.0.attn_output.weight
+create_tensor: loading tensor blk.0.ffn_norm.weight
+create_tensor: loading tensor blk.0.ffn_gate.weight
+create_tensor: loading tensor blk.0.ffn_down.weight
+create_tensor: loading tensor blk.0.ffn_up.weight
+create_tensor: loading tensor blk.1.attn_norm.weight
+create_tensor: loading tensor blk.1.attn_q.weight
+create_tensor: loading tensor blk.1.attn_k.weight
+create_tensor: loading tensor blk.1.attn_v.weight
+create_tensor: loading tensor blk.1.attn_output.weight
+create_tensor: loading tensor blk.1.ffn_norm.weight
+create_tensor: loading tensor blk.1.ffn_gate.weight
+create_tensor: loading tensor blk.1.ffn_down.weight
+create_tensor: loading tensor blk.1.ffn_up.weight
+create_tensor: loading tensor blk.2.attn_norm.weight
+create_tensor: loading tensor blk.2.attn_q.weight
+create_tensor: loading tensor blk.2.attn_k.weight
+create_tensor: loading tensor blk.2.attn_v.weight
+create_tensor: loading tensor blk.2.attn_output.weight
+create_tensor: loading tensor blk.2.ffn_norm.weight
+create_tensor: loading tensor blk.2.ffn_gate.weight
+create_tensor: loading tensor blk.2.ffn_down.weight
+create_tensor: loading tensor blk.2.ffn_up.weight
+create_tensor: loading tensor blk.3.attn_norm.weight
+create_tensor: loading tensor blk.3.attn_q.weight
+create_tensor: loading tensor blk.3.attn_k.weight
+create_tensor: loading tensor blk.3.attn_v.weight
+create_tensor: loading tensor blk.3.attn_output.weight
+create_tensor: loading tensor blk.3.ffn_norm.weight
+create_tensor: loading tensor blk.3.ffn_gate.weight
+create_tensor: loading tensor blk.3.ffn_down.weight
+create_tensor: loading tensor blk.3.ffn_up.weight
+create_tensor: loading tensor blk.4.attn_norm.weight
+create_tensor: loading tensor blk.4.attn_q.weight
+create_tensor: loading tensor blk.4.attn_k.weight
+create_tensor: loading tensor blk.4.attn_v.weight
+create_tensor: loading tensor blk.4.attn_output.weight
+create_tensor: loading tensor blk.4.ffn_norm.weight
+create_tensor: loading tensor blk.4.ffn_gate.weight
+create_tensor: loading tensor blk.4.ffn_down.weight
+create_tensor: loading tensor blk.4.ffn_up.weight
+create_tensor: loading tensor blk.5.attn_norm.weight
+create_tensor: loading tensor blk.5.attn_q.weight
+create_tensor: loading tensor blk.5.attn_k.weight
+create_tensor: loading tensor blk.5.attn_v.weight
+create_tensor: loading tensor blk.5.attn_output.weight
+create_tensor: loading tensor blk.5.ffn_norm.weight
+create_tensor: loading tensor blk.5.ffn_gate.weight
+create_tensor: loading tensor blk.5.ffn_down.weight
+create_tensor: loading tensor blk.5.ffn_up.weight
+create_tensor: loading tensor blk.6.attn_norm.weight
+create_tensor: loading tensor blk.6.attn_q.weight
+create_tensor: loading tensor blk.6.attn_k.weight
+create_tensor: loading tensor blk.6.attn_v.weight
+create_tensor: loading tensor blk.6.attn_output.weight
+create_tensor: loading tensor blk.6.ffn_norm.weight
+create_tensor: loading tensor blk.6.ffn_gate.weight
+create_tensor: loading tensor blk.6.ffn_down.weight
+create_tensor: loading tensor blk.6.ffn_up.weight
+create_tensor: loading tensor blk.7.attn_norm.weight
+create_tensor: loading tensor blk.7.attn_q.weight
+create_tensor: loading tensor blk.7.attn_k.weight
+create_tensor: loading tensor blk.7.attn_v.weight
+create_tensor: loading tensor blk.7.attn_output.weight
+create_tensor: loading tensor blk.7.ffn_norm.weight
+create_tensor: loading tensor blk.7.ffn_gate.weight
+create_tensor: loading tensor blk.7.ffn_down.weight
+create_tensor: loading tensor blk.7.ffn_up.weight
+create_tensor: loading tensor blk.8.attn_norm.weight
+create_tensor: loading tensor blk.8.attn_q.weight
+create_tensor: loading tensor blk.8.attn_k.weight
+create_tensor: loading tensor blk.8.attn_v.weight
+create_tensor: loading tensor blk.8.attn_output.weight
+create_tensor: loading tensor blk.8.ffn_norm.weight
+create_tensor: loading tensor blk.8.ffn_gate.weight
+create_tensor: loading tensor blk.8.ffn_down.weight
+create_tensor: loading tensor blk.8.ffn_up.weight
+create_tensor: loading tensor blk.9.attn_norm.weight
+create_tensor: loading tensor blk.9.attn_q.weight
+create_tensor: loading tensor blk.9.attn_k.weight
+create_tensor: loading tensor blk.9.attn_v.weight
+create_tensor: loading tensor blk.9.attn_output.weight
+create_tensor: loading tensor blk.9.ffn_norm.weight
+create_tensor: loading tensor blk.9.ffn_gate.weight
+create_tensor: loading tensor blk.9.ffn_down.weight
+create_tensor: loading tensor blk.9.ffn_up.weight
+create_tensor: loading tensor blk.10.attn_norm.weight
+create_tensor: loading tensor blk.10.attn_q.weight
+create_tensor: loading tensor blk.10.attn_k.weight
+create_tensor: loading tensor blk.10.attn_v.weight
+create_tensor: loading tensor blk.10.attn_output.weight
+create_tensor: loading tensor blk.10.ffn_norm.weight
+create_tensor: loading tensor blk.10.ffn_gate.weight
+create_tensor: loading tensor blk.10.ffn_down.weight
+create_tensor: loading tensor blk.10.ffn_up.weight
+create_tensor: loading tensor blk.11.attn_norm.weight
+create_tensor: loading tensor blk.11.attn_q.weight
+create_tensor: loading tensor blk.11.attn_k.weight
+create_tensor: loading tensor blk.11.attn_v.weight
+create_tensor: loading tensor blk.11.attn_output.weight
+create_tensor: loading tensor blk.11.ffn_norm.weight
+create_tensor: loading tensor blk.11.ffn_gate.weight
+create_tensor: loading tensor blk.11.ffn_down.weight
+create_tensor: loading tensor blk.11.ffn_up.weight
+create_tensor: loading tensor blk.12.attn_norm.weight
+create_tensor: loading tensor blk.12.attn_q.weight
+create_tensor: loading tensor blk.12.attn_k.weight
+create_tensor: loading tensor blk.12.attn_v.weight
+create_tensor: loading tensor blk.12.attn_output.weight
+create_tensor: loading tensor blk.12.ffn_norm.weight
+create_tensor: loading tensor blk.12.ffn_gate.weight
+create_tensor: loading tensor blk.12.ffn_down.weight
+create_tensor: loading tensor blk.12.ffn_up.weight
+create_tensor: loading tensor blk.13.attn_norm.weight
+create_tensor: loading tensor blk.13.attn_q.weight
+create_tensor: loading tensor blk.13.attn_k.weight
+create_tensor: loading tensor blk.13.attn_v.weight
+create_tensor: loading tensor blk.13.attn_output.weight
+create_tensor: loading tensor blk.13.ffn_norm.weight
+create_tensor: loading tensor blk.13.ffn_gate.weight
+create_tensor: loading tensor blk.13.ffn_down.weight
+create_tensor: loading tensor blk.13.ffn_up.weight
+create_tensor: loading tensor blk.14.attn_norm.weight
+create_tensor: loading tensor blk.14.attn_q.weight
+create_tensor: loading tensor blk.14.attn_k.weight
+create_tensor: loading tensor blk.14.attn_v.weight
+create_tensor: loading tensor blk.14.attn_output.weight
+create_tensor: loading tensor blk.14.ffn_norm.weight
+create_tensor: loading tensor blk.14.ffn_gate.weight
+create_tensor: loading tensor blk.14.ffn_down.weight
+create_tensor: loading tensor blk.14.ffn_up.weight
+create_tensor: loading tensor blk.15.attn_norm.weight
+create_tensor: loading tensor blk.15.attn_q.weight
+create_tensor: loading tensor blk.15.attn_k.weight
+create_tensor: loading tensor blk.15.attn_v.weight
+create_tensor: loading tensor blk.15.attn_output.weight
+create_tensor: loading tensor blk.15.ffn_norm.weight
+create_tensor: loading tensor blk.15.ffn_gate.weight
+create_tensor: loading tensor blk.15.ffn_down.weight
+create_tensor: loading tensor blk.15.ffn_up.weight
+create_tensor: loading tensor blk.16.attn_norm.weight
+create_tensor: loading tensor blk.16.attn_q.weight
+create_tensor: loading tensor blk.16.attn_k.weight
+create_tensor: loading tensor blk.16.attn_v.weight
+create_tensor: loading tensor blk.16.attn_output.weight
+create_tensor: loading tensor blk.16.ffn_norm.weight
+create_tensor: loading tensor blk.16.ffn_gate.weight
+create_tensor: loading tensor blk.16.ffn_down.weight
+create_tensor: loading tensor blk.16.ffn_up.weight
+create_tensor: loading tensor blk.17.attn_norm.weight
+create_tensor: loading tensor blk.17.attn_q.weight
+create_tensor: loading tensor blk.17.attn_k.weight
+create_tensor: loading tensor blk.17.attn_v.weight
+create_tensor: loading tensor blk.17.attn_output.weight
+create_tensor: loading tensor blk.17.ffn_norm.weight
+create_tensor: loading tensor blk.17.ffn_gate.weight
+create_tensor: loading tensor blk.17.ffn_down.weight
+create_tensor: loading tensor blk.17.ffn_up.weight
+create_tensor: loading tensor blk.18.attn_norm.weight
+create_tensor: loading tensor blk.18.attn_q.weight
+create_tensor: loading tensor blk.18.attn_k.weight
+create_tensor: loading tensor blk.18.attn_v.weight
+create_tensor: loading tensor blk.18.attn_output.weight
+create_tensor: loading tensor blk.18.ffn_norm.weight
+create_tensor: loading tensor blk.18.ffn_gate.weight
+create_tensor: loading tensor blk.18.ffn_down.weight
+create_tensor: loading tensor blk.18.ffn_up.weight
+create_tensor: loading tensor blk.19.attn_norm.weight
+create_tensor: loading tensor blk.19.attn_q.weight
+create_tensor: loading tensor blk.19.attn_k.weight
+create_tensor: loading tensor blk.19.attn_v.weight
+create_tensor: loading tensor blk.19.attn_output.weight
+create_tensor: loading tensor blk.19.ffn_norm.weight
+create_tensor: loading tensor blk.19.ffn_gate.weight
+create_tensor: loading tensor blk.19.ffn_down.weight
+create_tensor: loading tensor blk.19.ffn_up.weight
+create_tensor: loading tensor blk.20.attn_norm.weight
+create_tensor: loading tensor blk.20.attn_q.weight
+create_tensor: loading tensor blk.20.attn_k.weight
+create_tensor: loading tensor blk.20.attn_v.weight
+create_tensor: loading tensor blk.20.attn_output.weight
+create_tensor: loading tensor blk.20.ffn_norm.weight
+create_tensor: loading tensor blk.20.ffn_gate.weight
+create_tensor: loading tensor blk.20.ffn_down.weight
+create_tensor: loading tensor blk.20.ffn_up.weight
+create_tensor: loading tensor blk.21.attn_norm.weight
+create_tensor: loading tensor blk.21.attn_q.weight
+create_tensor: loading tensor blk.21.attn_k.weight
+create_tensor: loading tensor blk.21.attn_v.weight
+create_tensor: loading tensor blk.21.attn_output.weight
+create_tensor: loading tensor blk.21.ffn_norm.weight
+create_tensor: loading tensor blk.21.ffn_gate.weight
+create_tensor: loading tensor blk.21.ffn_down.weight
+create_tensor: loading tensor blk.21.ffn_up.weight
+create_tensor: loading tensor blk.22.attn_norm.weight
+create_tensor: loading tensor blk.22.attn_q.weight
+create_tensor: loading tensor blk.22.attn_k.weight
+create_tensor: loading tensor blk.22.attn_v.weight
+create_tensor: loading tensor blk.22.attn_output.weight
+create_tensor: loading tensor blk.22.ffn_norm.weight
+create_tensor: loading tensor blk.22.ffn_gate.weight
+create_tensor: loading tensor blk.22.ffn_down.weight
+create_tensor: loading tensor blk.22.ffn_up.weight
+create_tensor: loading tensor blk.23.attn_norm.weight
+create_tensor: loading tensor blk.23.attn_q.weight
+create_tensor: loading tensor blk.23.attn_k.weight
+create_tensor: loading tensor blk.23.attn_v.weight
+create_tensor: loading tensor blk.23.attn_output.weight
+create_tensor: loading tensor blk.23.ffn_norm.weight
+create_tensor: loading tensor blk.23.ffn_gate.weight
+create_tensor: loading tensor blk.23.ffn_down.weight
+create_tensor: loading tensor blk.23.ffn_up.weight
+create_tensor: loading tensor blk.24.attn_norm.weight
+create_tensor: loading tensor blk.24.attn_q.weight
+create_tensor: loading tensor blk.24.attn_k.weight
+create_tensor: loading tensor blk.24.attn_v.weight
+create_tensor: loading tensor blk.24.attn_output.weight
+create_tensor: loading tensor blk.24.ffn_norm.weight
+create_tensor: loading tensor blk.24.ffn_gate.weight
+create_tensor: loading tensor blk.24.ffn_down.weight
+create_tensor: loading tensor blk.24.ffn_up.weight
+create_tensor: loading tensor blk.25.attn_norm.weight
+create_tensor: loading tensor blk.25.attn_q.weight
+create_tensor: loading tensor blk.25.attn_k.weight
+create_tensor: loading tensor blk.25.attn_v.weight
+create_tensor: loading tensor blk.25.attn_output.weight
+create_tensor: loading tensor blk.25.ffn_norm.weight
+create_tensor: loading tensor blk.25.ffn_gate.weight
+create_tensor: loading tensor blk.25.ffn_down.weight
+create_tensor: loading tensor blk.25.ffn_up.weight
+create_tensor: loading tensor blk.26.attn_norm.weight
+create_tensor: loading tensor blk.26.attn_q.weight
+create_tensor: loading tensor blk.26.attn_k.weight
+create_tensor: loading tensor blk.26.attn_v.weight
+create_tensor: loading tensor blk.26.attn_output.weight
+create_tensor: loading tensor blk.26.ffn_norm.weight
+create_tensor: loading tensor blk.26.ffn_gate.weight
+create_tensor: loading tensor blk.26.ffn_down.weight
+create_tensor: loading tensor blk.26.ffn_up.weight
+create_tensor: loading tensor blk.27.attn_norm.weight
+create_tensor: loading tensor blk.27.attn_q.weight
+create_tensor: loading tensor blk.27.attn_k.weight
+create_tensor: loading tensor blk.27.attn_v.weight
+create_tensor: loading tensor blk.27.attn_output.weight
+create_tensor: loading tensor blk.27.ffn_norm.weight
+create_tensor: loading tensor blk.27.ffn_gate.weight
+create_tensor: loading tensor blk.27.ffn_down.weight
+create_tensor: loading tensor blk.27.ffn_up.weight
+create_tensor: loading tensor blk.28.attn_norm.weight
+create_tensor: loading tensor blk.28.attn_q.weight
+create_tensor: loading tensor blk.28.attn_k.weight
+create_tensor: loading tensor blk.28.attn_v.weight
+create_tensor: loading tensor blk.28.attn_output.weight
+create_tensor: loading tensor blk.28.ffn_norm.weight
+create_tensor: loading tensor blk.28.ffn_gate.weight
+create_tensor: loading tensor blk.28.ffn_down.weight
+create_tensor: loading tensor blk.28.ffn_up.weight
+create_tensor: loading tensor blk.29.attn_norm.weight
+create_tensor: loading tensor blk.29.attn_q.weight
+create_tensor: loading tensor blk.29.attn_k.weight
+create_tensor: loading tensor blk.29.attn_v.weight
+create_tensor: loading tensor blk.29.attn_output.weight
+create_tensor: loading tensor blk.29.ffn_norm.weight
+create_tensor: loading tensor blk.29.ffn_gate.weight
+create_tensor: loading tensor blk.29.ffn_down.weight
+create_tensor: loading tensor blk.29.ffn_up.weight
+create_tensor: loading tensor blk.30.attn_norm.weight
+create_tensor: loading tensor blk.30.attn_q.weight
+create_tensor: loading tensor blk.30.attn_k.weight
+create_tensor: loading tensor blk.30.attn_v.weight
+create_tensor: loading tensor blk.30.attn_output.weight
+create_tensor: loading tensor blk.30.ffn_norm.weight
+create_tensor: loading tensor blk.30.ffn_gate.weight
+create_tensor: loading tensor blk.30.ffn_down.weight
+create_tensor: loading tensor blk.30.ffn_up.weight
+create_tensor: loading tensor blk.31.attn_norm.weight
+create_tensor: loading tensor blk.31.attn_q.weight
+create_tensor: loading tensor blk.31.attn_k.weight
+create_tensor: loading tensor blk.31.attn_v.weight
+create_tensor: loading tensor blk.31.attn_output.weight
+create_tensor: loading tensor blk.31.ffn_norm.weight
+create_tensor: loading tensor blk.31.ffn_gate.weight
+create_tensor: loading tensor blk.31.ffn_down.weight
+create_tensor: loading tensor blk.31.ffn_up.weight
+done_getting_tensors: tensor 'token_embd.weight' (q4_K) (and 0 others) cannot be used with preferred buffer type CUDA_Host, using CPU instead
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 31 repeating layers to GPU
+load_tensors: offloaded 33/33 layers to GPU
+load_tensors:   CPU_Mapped model buffer size =   304.88 MiB
+load_tensors:        CUDA0 model buffer size =  4453.62 MiB
+.......................................................................................
+[DYNIN-T2S-VOCAB text_len=126372 image=126372..134563 speech=134564..138659 n_vocab=138752 source=first_[PAD<id>]_piece ok=1 why='']
+llama_context: constructing llama_context
+llama_context: n_seq_max     = 2
+llama_context: n_ctx         = 4096
+llama_context: n_ctx_seq     = 2048
+llama_context: n_batch       = 4096
+llama_context: n_ubatch      = 4096
+llama_context: causal_attn   = 0
+llama_context: flash_attn    = auto
+llama_context: kv_unified    = false
+llama_context: freq_base     = 500000.0
+llama_context: freq_scale    = 1
+llama_context: n_rs_seq      = 0
+llama_context: n_outputs_max = 4096
+llama_context: n_ctx_seq (2048) < n_ctx_train (4096) -- the full capacity of the model will not be utilized
+set_abort_callback: call
+llama_context:  CUDA_Host  output buffer size =     1.06 MiB
+llama_kv_cache: layer   0: dev = CUDA0
+llama_kv_cache: layer   1: dev = CUDA0
+llama_kv_cache: layer   2: dev = CUDA0
+llama_kv_cache: layer   3: dev = CUDA0
+llama_kv_cache: layer   4: dev = CUDA0
+llama_kv_cache: layer   5: dev = CUDA0
+llama_kv_cache: layer   6: dev = CUDA0
+llama_kv_cache: layer   7: dev = CUDA0
+llama_kv_cache: layer   8: dev = CUDA0
+llama_kv_cache: layer   9: dev = CUDA0
+llama_kv_cache: layer  10: dev = CUDA0
+llama_kv_cache: layer  11: dev = CUDA0
+llama_kv_cache: layer  12: dev = CUDA0
+llama_kv_cache: layer  13: dev = CUDA0
+llama_kv_cache: layer  14: dev = CUDA0
+llama_kv_cache: layer  15: dev = CUDA0
+llama_kv_cache: layer  16: dev = CUDA0
+llama_kv_cache: layer  17: dev = CUDA0
+llama_kv_cache: layer  18: dev = CUDA0
+llama_kv_cache: layer  19: dev = CUDA0
+llama_kv_cache: layer  20: dev = CUDA0
+llama_kv_cache: layer  21: dev = CUDA0
+llama_kv_cache: layer  22: dev = CUDA0
+llama_kv_cache: layer  23: dev = CUDA0
+llama_kv_cache: layer  24: dev = CUDA0
+llama_kv_cache: layer  25: dev = CUDA0
+llama_kv_cache: layer  26: dev = CUDA0
+llama_kv_cache: layer  27: dev = CUDA0
+llama_kv_cache: layer  28: dev = CUDA0
+llama_kv_cache: layer  29: dev = CUDA0
+llama_kv_cache: layer  30: dev = CUDA0
+llama_kv_cache: layer  31: dev = CUDA0
+llama_kv_cache:      CUDA0 KV buffer size =  2048.00 MiB
+llama_kv_cache: size = 2048.00 MiB (  2048 cells,  32 layers,  2/2 seqs), K (f16): 1024.00 MiB, V (f16): 1024.00 MiB
+llama_kv_cache: attn_rot_k = 0, n_embd_head_k_all = 128
+llama_kv_cache: attn_rot_v = 0, n_embd_head_k_all = 128
+llama_context: enumerating backends
+llama_context: backend_ptrs.size() = 2
+sched_reserve: reserving ...
+sched_reserve: max_nodes = 2328
+sched_reserve: reserving full memory module
+sched_reserve: worst-case: n_tokens = 4096, n_seqs = 2, n_outputs = 2
+graph_reserve: reserving a graph for ubatch with n_tokens =    1, n_seqs =  2, n_outputs =    2
+graph_reserve: making n_tokens a multiple of n_seqs - n_tokens = 2, n_seqs = 2, n_outputs = 2
+sched_reserve: Flash Attention was auto, set to enabled
+sched_reserve: resolving fused Gated Delta Net support:
+graph_reserve: reserving a graph for ubatch with n_tokens =    1, n_seqs =  2, n_outputs =    2
+graph_reserve: making n_tokens a multiple of n_seqs - n_tokens = 2, n_seqs = 2, n_outputs = 2
+sched_reserve: fused Gated Delta Net (autoregressive) enabled
+graph_reserve: reserving a graph for ubatch with n_tokens =   32, n_seqs =  2, n_outputs =   32
+sched_reserve: fused Gated Delta Net (chunked) enabled
+graph_reserve: reserving a graph for ubatch with n_tokens = 4096, n_seqs =  2, n_outputs = 4096
+graph_reserve: reserving a graph for ubatch with n_tokens =    2, n_seqs =  2, n_outputs =    2
+graph_reserve: reserving a graph for ubatch with n_tokens = 4096, n_seqs =  2, n_outputs = 4096
+sched_reserve:      CUDA0 compute buffer size =  2232.00 MiB
+sched_reserve:  CUDA_Host compute buffer size =   144.11 MiB
+sched_reserve: graph nodes  = 1062
+sched_reserve: graph splits = 2
+sched_reserve: reserve took 50.35 ms, sched copies = 1
+set_attn_pad_token: pad_id = 126093
+[DYNIN-T2S-SCHEDULE steps=48 block=128 cfg=2.50 kv_margin=32 seed=42 compare=1]
+dynin_vocoder: loaded <path>/emova_u2s.gguf (n_styles=126 style_dim=256 inter=192 sr=22050 base_offset=178)
+[DYNIN-T2S-KVBLOCK margin=0 block=0 ms=38280.42]
+CUDA Graph id 327 reused
+ggml_backend_cuda_graph_compute: CUDA graph warmup complete
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+CUDA Graph id 327 reused
+[DYNIN-T2S-KVBLOCK margin=32 block=0 ms=3810.89]
+[ENCP-GRAPH ops=816 on_cuda=816 on_cpu=0 on_other=0]
+[ENCP-GRAPH ops=816 on_cuda=816 on_cpu=0 on_other=0]
+[DYNIN-U2S-STAGE-CHECK stage=enc_p max_abs=0.000995 cos=0.99999998 ms_cpu=96.83 ms_cuda=10.20 ok=1 err=]
+[ENCP-DEFAULT backend=cuda reason=stage_check_ok]
+[FLOW-GRAPH ops=593 on_cuda=593 on_cpu=0 on_other=0]
+[DYNIN-U2S-STAGE-CHECK stage=flow max_abs=0.002878 cos=0.99999997 ms_cpu=346.54 ms_cuda=12.72 ok=1 err=]
+[FLOW-DEFAULT backend=cuda reason=stage_check_ok]
+[DYNIN-U2S-GRAPH ops=798 on_cuda=798 on_cpu=0 on_other=0]
+[DYNIN-U2S-CUDA-CHECK samples=41984 max_abs_int16=64 max_abs_float=0.001955 first_mismatch=2 ms_cpu=1149.41 ms_cuda=3544.23 cuda_init=1 ok=0 err=]
+[DYNIN-U2S-GRAPH ops=798 on_cuda=798 on_cpu=0 on_other=0]
+[DYNIN-U2S-BISECT block=pre n=83968 max_abs_diff=41.654812 FIRST_DIVERGENCE]
+[DYNIN-U2S-BISECT block=upc0 n=335872 max_abs_diff=6.116085]
+[DYNIN-U2S-BISECT block=stage0 n=335872 max_abs_diff=12.556509]
+[DYNIN-U2S-BISECT block=upc1 n=1343488 max_abs_diff=1.995770]
+[DYNIN-U2S-BISECT block=stage1 n=1343488 max_abs_diff=9.162016]
+[DYNIN-U2S-BISECT block=upc2 n=1343488 max_abs_diff=1.349396]
+[DYNIN-U2S-BISECT block=stage2 n=1343488 max_abs_diff=3.228869]
+[DYNIN-U2S-BISECT block=upc3 n=1343488 max_abs_diff=0.500787]
+[DYNIN-U2S-BISECT block=stage3 n=1343488 max_abs_diff=0.848502]
+[DYNIN-U2S-DEFAULT backend=cpu reason=fidelity_fail rule=cuda_vs_cpu_self_consistency max_abs_int16=64 tolerance=8]
+[DYNIN-U2S-STAGES enc_p=240.71 dp=25.19 expand=0.51 flow=369.50 gen=1149.41 total=10030.29 T_y=164 n_units=46]
+[DYNIN-U2S ms=10030.29 n_units=46 backend=cpu threads=14 enc_p_ms=240.71 flow_ms=369.50 gen_ms=1149.41]
+[DYNIN-U2S-OUT wav=<path>/t2s_exact.wav seconds=1.904 samples=41984 peak=0.61917 rms=0.08866]
+[ENCP-GRAPH ops=816 on_cuda=816 on_cpu=0 on_other=0]
+[FLOW-GRAPH ops=593 on_cuda=593 on_cpu=0 on_other=0]
+[DYNIN-U2S-STAGES enc_p=17.18 dp=25.39 expand=0.41 flow=31.82 gen=1070.54 total=1145.34 T_y=161 n_units=46]
+[DYNIN-U2S ms=1145.34 n_units=46 backend=cpu threads=14 enc_p_ms=17.18 flow_ms=31.82 gen_ms=1070.54]
+[DYNIN-U2S-OUT wav=<path>/t2s_margin.wav seconds=1.869 samples=41216 peak=0.55487 rms=0.08531]
+whisper_init_from_file_with_params_no_state: loading model from '<path>/ggml-base.en.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8150 MiB):
+  Device 0: NVIDIA GeForce RTX 5070 Laptop GPU, compute capability 12.0, VMM: yes, VRAM: 8150 MiB
+whisper_init_with_params_no_state: devices    = 2
+whisper_init_with_params_no_state: backends   = 2
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51864
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 512
+whisper_model_load: n_audio_head  = 8
+whisper_model_load: n_audio_layer = 6
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 512
+whisper_model_load: n_text_head   = 8
+whisper_model_load: n_text_layer  = 6
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 2 (base)
+whisper_model_load: adding 1607 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:        CUDA0 total size =   147.37 MB
+whisper_model_load: model size    =  147.37 MB
+whisper_backend_init_gpu: device 0: CUDA0 (type: 1)
+whisper_backend_init_gpu: found GPU device 0: CUDA0 (type: 1, cnt: 0)
+whisper_backend_init_gpu: using CUDA0 backend
+whisper_init_state: kv self size  =    6.29 MB
+whisper_init_state: kv cross size =   18.87 MB
+whisper_init_state: kv pad  size  =    3.15 MB
+whisper_init_state: compute buffer (conv)   =   17.24 MB
+whisper_init_state: compute buffer (encode) =   23.09 MB
+whisper_init_state: compute buffer (cross)  =    4.66 MB
+whisper_init_state: compute buffer (decode) =   97.29 MB
+read_audio_data: reading audio data from '<path>/t2s_exact.wav' ...
+read_audio_data: trying to decode with miniaudio
+
+system_info: n_threads = 4 / 16 | WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CUDA : ARCHS = 1200 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | AVX512 = 1 | OPENMP = 1 | REPACK = 1 | 
+
+main: processing '<path>/t2s_exact.wav' (30464 samples, 1.9 sec), 4 threads, 1 processors, 5 beams + best of 5, lang = en, task = transcribe, timestamps = 1 ...
+
+
+whisper_print_timings:     load time =   299.28 ms
+whisper_print_timings:     fallbacks =   0 p /   0 h
+whisper_print_timings:      mel time =     2.12 ms
+whisper_print_timings:   sample time =    20.04 ms /    53 runs (     0.38 ms per run)
+whisper_print_timings:   encode time =   118.78 ms /     1 runs (   118.78 ms per run)
+whisper_print_timings:   decode time =    19.15 ms /     1 runs (    19.15 ms per run)
+whisper_print_timings:   batchd time =    40.82 ms /    48 runs (     0.85 ms per run)
+whisper_print_timings:   prompt time =     0.00 ms /     1 runs (     0.00 ms per run)
+whisper_print_timings:    total time =   532.94 ms
+whisper_init_from_file_with_params_no_state: loading model from '<path>/ggml-base.en.bin'
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8150 MiB):
+  Device 0: NVIDIA GeForce RTX 5070 Laptop GPU, compute capability 12.0, VMM: yes, VRAM: 8150 MiB
+whisper_init_with_params_no_state: devices    = 2
+whisper_init_with_params_no_state: backends   = 2
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51864
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 512
+whisper_model_load: n_audio_head  = 8
+whisper_model_load: n_audio_layer = 6
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 512
+whisper_model_load: n_text_head   = 8
+whisper_model_load: n_text_layer  = 6
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 2 (base)
+whisper_model_load: adding 1607 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:        CUDA0 total size =   147.37 MB
+whisper_model_load: model size    =  147.37 MB
+whisper_backend_init_gpu: device 0: CUDA0 (type: 1)
+whisper_backend_init_gpu: found GPU device 0: CUDA0 (type: 1, cnt: 0)
+whisper_backend_init_gpu: using CUDA0 backend
+whisper_init_state: kv self size  =    6.29 MB
+whisper_init_state: kv cross size =   18.87 MB
+whisper_init_state: kv pad  size  =    3.15 MB
+whisper_init_state: compute buffer (conv)   =   17.24 MB
+whisper_init_state: compute buffer (encode) =   23.09 MB
+whisper_init_state: compute buffer (cross)  =    4.66 MB
+whisper_init_state: compute buffer (decode) =   97.29 MB
+read_audio_data: reading audio data from '<path>/t2s_margin.wav' ...
+read_audio_data: trying to decode with miniaudio
+
+system_info: n_threads = 4 / 16 | WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CUDA : ARCHS = 1200 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | AVX512 = 1 | OPENMP = 1 | REPACK = 1 | 
+
+main: processing '<path>/t2s_margin.wav' (29907 samples, 1.9 sec), 4 threads, 1 processors, 5 beams + best of 5, lang = en, task = transcribe, timestamps = 1 ...
+
+
+whisper_print_timings:     load time =   212.29 ms
+whisper_print_timings:     fallbacks =   0 p /   0 h
+whisper_print_timings:      mel time =     2.14 ms
+whisper_print_timings:   sample time =    21.38 ms /    65 runs (     0.33 ms per run)
+whisper_print_timings:   encode time =    58.74 ms /     1 runs (    58.74 ms per run)
+whisper_print_timings:   decode time =    17.94 ms /     1 runs (    17.94 ms per run)
+whisper_print_timings:   batchd time =    45.12 ms /    60 runs (     0.75 ms per run)
+whisper_print_timings:   prompt time =     0.00 ms /     1 runs (     0.00 ms per run)
+whisper_print_timings:    total time =   371.60 ms
+[DYNIN-T2S-CHECK run=exact  text='The lights flickered twice before the power went out.' whisper='The light's liquored twice and now.' word_overlap=0.2500]
+[DYNIN-T2S-CHECK run=margin text='The lights flickered twice before the power went out.' whisper='The light flitted 12 for the power went out.' word_overlap=0.5000]
+[DYNIN-T2S-MATCH lengths=(46,46) exact_match_fraction=0.0217 first_divergence_index=1]
+[DYNIN-T2S-TIMING exact_total_ms=39154.0 exact_forward_passes=49 margin_total_ms=3938.2 margin_forward_passes=49]
+~llama_context:      CUDA0 compute buffer size is 2232.0000 MiB, matches expectation of 2232.0000 MiB
+~llama_context:  CUDA_Host compute buffer size is 144.1094 MiB, matches expectation of 144.1094 MiB
